@@ -8,3 +8,14 @@ receivers:
 - name: 'email-notifications'
   email_configs:
     - to: 'david11011996@gmail.com'
+      from: 'prometheus@example.com' # Replace with the sender email address
+      smarthost: 'smtp.example.com:587' # Replace with your SMTP server address and port
+      auth_username: 'your-username' # Replace with your SMTP username
+      auth_password: 'your-password' # Replace with your SMTP password
+      send_resolved: true
+
+- name: 'slack-notifications'
+  slack_configs:
+    - api_url: "https://hooks.slack.com/services/YOUR-SLACK-API-URL" # Replace with your Slack Incoming Webhook URL
+      channel: '#general' # Replace with the Slack channel or user where you want to send notifications
+      send_resolved: true # Set to true to send resolved alerts as well
