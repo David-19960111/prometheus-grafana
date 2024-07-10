@@ -1,14 +1,14 @@
 #Elastic Computer Cloud
 region = "us-west-1"
-ami_id = ""
-instance_type = ""
-key_name = ""
+ami_id = "ami-066f98455b59ca1ee"
+instance_type = "t2.micro"
+key_name = "david"
 instance_count = 1
 volume-size = 20
 
 #Virtual Private Cloud
-vpc_id = ""
-subnet_ids = [""]
+vpc_id = "vpc-085a67a19b144dd64"
+subnet_ids = ["subnet-0c03e74a3835e6921"]
 
 #Ec2 Tags
 name        = "prometheus-stack"
